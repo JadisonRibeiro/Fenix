@@ -1,0 +1,2691 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FÊNIX CONSULTORIA</title>
+    <meta
+      name="description"
+      content="FÊNIX CONSULTORIA: Especialistas em treinamentos normativos, segurança do trabalho e consultoria empresarial no Pará. Soluções completas em SST."
+    />
+    <meta
+      name="keywords"
+      content="treinamento, segurança do trabalho, SST, consultoria, normas regulamentadoras, NR, Pará, Paragominas, cursos, capacitação"
+    />
+    <meta name="author" content="FÊNIX CONSULTORIA" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LogoBranca.png" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="FÊNIX CONSULTORIA - Segurança do Trabalho no Pará"
+    />
+    <meta
+      property="og:description"
+      content="Especialistas em treinamentos normativos e consultoria em segurança do trabalho. Soluções completas para sua empresa."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Preload de fontes críticas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload de imagem principal -->
+    <link rel="preload" href="image/LogoBranca.png" as="image" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #ffffff;
+        --secondary: #000000;
+        --accent: #ff6b00;
+        --accent-dark: #e55a00;
+        --accent-light: #f96322;
+        --dark-gray: #1a1a1a;
+        --medium-gray: #333333;
+        --light-gray: #f8f9fa;
+        --text-dark: #212121;
+        --text-light: #666666;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        background-color: var(--primary);
+        color: var(--text-dark);
+        line-height: 1.6;
+        font-family: "Poppins", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Header e Navegação */
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--accent);
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-scrolled {
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 107, 0, 0.95);
+        backdrop-filter: blur(10px);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-img {
+        height: 70px;
+        width: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-img:hover {
+        transform: scale(1.05);
+      }
+
+      .logo-text {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-item {
+        margin-left: 25px;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 0.95rem;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus {
+        color: var(--secondary);
+        outline: none;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--secondary);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after,
+      .nav-link:focus::after {
+        width: 100%;
+      }
+
+      .nav-link.active {
+        color: var(--secondary);
+      }
+
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        min-height: 44px;
+        min-width: 44px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1001;
+        background: none;
+        border: none;
+      }
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+        background-color: white;
+      }
+
+      /* Faixa de Botões FLUTUANTE */
+      .button-strip {
+        background-color: var(--secondary);
+        padding: 10px 0;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        border-radius: 0 0 40px 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+        transform: translateY(0);
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.95);
+        border-top: 5px solid var(--accent);
+        border-bottom: 3px solid var(--accent);
+      }
+
+      .button-strip.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      .button-strip.scrolled {
+        top: 70px;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(15px);
+        border-radius: 0 0 15px 15px;
+        padding: 20px 0;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .button-strip .container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .strip-button {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 220px;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+        backdrop-filter: blur(5px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .strip-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .strip-button:hover::before {
+        left: 100%;
+      }
+
+      .strip-button:hover {
+        background-color: white;
+        color: var(--secondary);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+      }
+
+      /* Hero Section CORRIGIDA - MODIFICADA */
+      .hero {
+        min-height: 140vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        color: var(--text-dark);
+        margin-top: 80px;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+      }
+
+      .hero-content {
+        padding: 0 15px;
+        animation: fadeInUp 1s ease;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 30px;
+        line-height: 1.2;
+        color: var(--text-dark);
+        font-weight: 800;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+        display: block;
+        position: relative;
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        margin-top: 10px;
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .hero-image img {
+        width: auto;
+        max-width: 300px;
+        max-height: 300px;
+        height: auto;
+        border-radius: 20px;
+        animation: float 6s ease-in-out infinite;
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
+        transition: transform 0.5s ease;
+        object-fit: contain;
+      }
+
+      .hero-image img:hover {
+        transform: scale(1.05);
+      }
+
+      .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--accent);
+        font-size: 2rem;
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        z-index: 1;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+      }
+
+      .scroll-down:hover {
+        opacity: 1;
+      }
+
+      /* Carrossel de Serviços - CORRIGIDO */
+      .services-carousel {
+        padding: 80px 0;
+        background-color: var(--light-gray);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel-container {
+        overflow: hidden;
+        padding: 20px 0;
+        position: relative;
+        width: 100%;
+        min-height: 180px;
+      }
+
+      /* CORREÇÃO CRÍTICA: Carrossel sem sobreposição */
+      .carousel-track {
+        display: flex;
+        gap: 0;
+        width: max-content;
+        will-change: transform;
+      }
+
+      .carousel-track.primary {
+        animation: carousel-scroll 40s linear infinite;
+      }
+
+      .carousel-track.secondary {
+        animation: carousel-scroll 40s linear infinite;
+        animation-delay: 20s;
+        display: flex;
+      }
+
+      .carousel-item {
+        flex: 0 0 auto;
+        width: 240px;
+        margin: 0;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .carousel-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-icon-large {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        box-shadow: var(--shadow);
+        border: 2px solid var(--accent);
+        transition: all 0.3s ease;
+      }
+
+      .carousel-item:hover .service-icon-large {
+        transform: rotate(10deg);
+        background-color: var(--accent);
+      }
+
+      .carousel-item:hover .service-icon-large i {
+        color: white;
+      }
+
+      .service-icon-large i {
+        font-size: 2rem;
+        color: var(--accent);
+        transition: color 0.3s ease;
+      }
+
+      .carousel-item h4 {
+        font-size: 1.1rem;
+        margin: 0;
+        color: var(--text-dark);
+        font-weight: 600;
+        line-height: 1.4;
+        padding: 0 5px;
+      }
+
+      /* Seções comuns */
+      section {
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+        padding: 0 20px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        display: inline-block;
+        position: relative;
+        padding-bottom: 15px;
+        color: var(--text-dark);
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background: var(--accent);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        color: var(--text-light);
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      /* Seção de Vídeo */
+      .video-section {
+        padding: 80px 0;
+        background-color: var(--light-gray);
+      }
+
+      .video-container {
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow-hover);
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        background-color: #000;
+      }
+
+      .video-wrapper iframe,
+      .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .video-info {
+        padding: 30px;
+        background-color: white;
+        text-align: center;
+      }
+
+      .video-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: var(--accent);
+      }
+
+      .video-info p {
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      /* Diferenciais */
+      .differentials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .differential-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border-top: 5px solid var(--accent);
+      }
+
+      .differential-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .differential-icon {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      .differential-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--dark-gray);
+      }
+
+      .differential-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      /* Sobre */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-image img {
+        width: 70%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 15px;
+        transition: transform 0.5s ease;
+      }
+
+      .about-image img:hover {
+        transform: scale(1.03);
+      }
+
+      .about-text h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--accent);
+      }
+
+      .about-text p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+        font-size: 1.05rem;
+        color: var(--text-light);
+      }
+
+      /* Nossos Serviços */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent);
+      }
+
+      .service-card-icon {
+        font-size: 3rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-card-icon {
+        transform: scale(1.1);
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--dark-gray);
+      }
+
+      .service-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      /* Mapa Aprimorado */
+      .map-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow-hover);
+        border: 3px solid var(--accent);
+      }
+
+      .map-frame {
+        height: 400px;
+        min-height: 300px;
+      }
+
+      .map-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .map-info {
+        padding: 30px;
+      }
+
+      .map-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        color: var(--accent);
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .contact-info-icon {
+        width: 45px;
+        height: 45px;
+        background-color: var(--light-gray);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info-item:hover .contact-info-icon {
+        background-color: var(--accent);
+        color: white;
+        transform: rotate(10deg);
+      }
+
+      .contact-info-text h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: var(--dark-gray);
+      }
+
+      .contact-info-text p {
+        color: var(--text-light);
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      /* FAQ */
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        transition: transform 0.3s ease;
+        box-shadow: var(--shadow);
+        border: 2px solid transparent;
+      }
+
+      .faq-item:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .faq-question {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        min-height: 44px;
+        color: var(--text-dark);
+        font-size: 1.05rem;
+      }
+
+      .faq-question:hover {
+        background-color: var(--light-gray);
+      }
+
+      .faq-icon {
+        color: var(--accent);
+        margin-right: 10px;
+        font-size: 1.1rem;
+      }
+
+      .faq-arrow {
+        transition: transform 0.3s ease;
+        color: var(--accent);
+        font-size: 1.1rem;
+      }
+
+      .faq-item.active .faq-arrow {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.3s ease,
+          padding 0.3s ease;
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+        max-height: 1000px;
+      }
+
+      /* Contato */
+      .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .contact-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        box-shadow: var(--shadow);
+        border: 2px solid transparent;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        color: var(--accent);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .contact-card:hover .contact-icon {
+        transform: scale(1.1);
+      }
+
+      /* Botões */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 25px;
+        background-color: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent);
+        text-align: center;
+        justify-content: center;
+        min-width: 160px;
+        min-height: 44px;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .btn:hover,
+      .btn:focus {
+        background-color: transparent;
+        color: var(--accent);
+        outline: none;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
+      }
+
+      .btn-whatsapp {
+        background-color: #25d366;
+        border-color: #25d366;
+      }
+
+      .btn-whatsapp:hover,
+      .btn-whatsapp:focus {
+        background-color: transparent;
+        color: #25d366;
+      }
+
+      .btn-dark {
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+      }
+
+      .btn-dark:hover,
+      .btn-dark:focus {
+        background-color: transparent;
+        color: var(--secondary);
+      }
+
+      .btn-small {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        min-width: 140px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark-gray);
+        padding: 60px 0 20px;
+        color: white;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .footer-column {
+        flex: 1;
+        margin-right: 30px;
+      }
+
+      .footer-column:last-child {
+        margin-right: 0;
+      }
+
+      .footer-column h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-column h3::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent);
+        bottom: 0;
+        left: 0;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus {
+        color: var(--accent);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover,
+      .social-link:focus {
+        background-color: var(--accent);
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* WhatsApp Float - Animação Aprimorada */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        z-index: 1000;
+        animation: pulse-whatsapp 2s infinite;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover,
+      .whatsapp-float:focus {
+        transform: scale(1.15) rotate(5deg);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.8);
+        outline: none;
+      }
+
+      .whatsapp-float i {
+        color: white;
+        font-size: 28px;
+        animation: bounce-whatsapp 1.5s infinite;
+      }
+
+      /* Animações */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0) translateX(-50%);
+        }
+        40% {
+          transform: translateY(-10px) translateX(-50%);
+        }
+        60% {
+          transform: translateY(-5px) translateX(-50%);
+        }
+      }
+
+      @keyframes pulse-whatsapp {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      @keyframes bounce-whatsapp {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      /* Animações do carrossel infinito CORRIGIDAS */
+      @keyframes carousel-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 10));
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsividade CORRIGIDA */
+      @media (max-width: 1200px) {
+        .hero-container {
+          gap: 40px;
+        }
+
+        .differentials-grid,
+        .services-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+
+      @media (max-width: 992px) {
+        .footer-content {
+          flex-direction: column;
+        }
+
+        .footer-column {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+
+        .map-container {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-container {
+          gap: 30px;
+          text-align: center;
+        }
+
+        .hero-image {
+          order: -1;
+        }
+
+        .hero-image img {
+          max-width: 250px;
+          max-height: 250px;
+        }
+
+        .about-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .button-strip {
+          top: 70px;
+        }
+
+        .carousel-item {
+          width: 220px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 70px;
+          gap: 0;
+          flex-direction: column;
+          background-color: var(--accent);
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+          padding: 20px 0;
+          height: calc(100vh - 70px);
+          overflow-y: auto;
+          z-index: 999;
+        }
+
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .nav-item {
+          margin: 10px 0;
+          width: 100%;
+        }
+
+        .nav-link {
+          padding: 15px;
+          display: block;
+          width: 100%;
+          justify-content: center;
+          font-size: 1.1rem;
+        }
+
+        .button-strip {
+          display: none;
+        }
+
+        .hero {
+          margin-top: 70px;
+          min-height: auto;
+          padding: 40px 0;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero h1 span {
+          font-size: 2.5rem;
+        }
+
+        .hero-image img {
+          max-width: 200px;
+          max-height: 200px;
+        }
+
+        .carousel-track.secondary {
+          display: none;
+        }
+
+        .carousel-container {
+          min-height: 150px;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .contact-cards {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .map-frame {
+          height: 300px;
+        }
+
+        .map-info {
+          padding: 25px;
+        }
+
+        .video-info {
+          padding: 20px;
+        }
+
+        section {
+          padding: 60px 0;
+        }
+
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .whatsapp-float i {
+          font-size: 24px;
+        }
+
+        .carousel-item {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .logo-img {
+          height: 40px;
+        }
+
+        .logo-text {
+          font-size: 1rem;
+        }
+
+        .carousel-item {
+          width: 180px;
+          padding: 0 5px;
+        }
+
+        .service-icon-large {
+          width: 60px;
+          height: 60px;
+        }
+
+        .service-icon-large i {
+          font-size: 1.5rem;
+        }
+
+        .carousel-item h4 {
+          font-size: 0.9rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .section-subtitle {
+          font-size: 1rem;
+        }
+
+        .differential-card,
+        .service-card,
+        .contact-card {
+          padding: 25px 20px;
+        }
+
+        .differential-card h3,
+        .service-card h3 {
+          font-size: 1.3rem;
+        }
+
+        .about-text h3 {
+          font-size: 1.6rem;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          min-width: 140px;
+          font-size: 0.9rem;
+        }
+
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero h1 span {
+          font-size: 2rem;
+        }
+
+        .hero-image img {
+          max-width: 180px;
+          max-height: 180px;
+        }
+
+        .carousel-item {
+          width: 160px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-container {
+          gap: 30px;
+        }
+
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+
+        .hero h1 span {
+          font-size: 1.8rem;
+        }
+
+        .hero-image img {
+          max-width: 150px;
+          max-height: 150px;
+        }
+
+        .carousel-item {
+          width: 140px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .differentials-grid,
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .button-strip .container {
+          gap: 10px;
+        }
+
+        .strip-button {
+          min-width: 180px;
+          font-size: 0.9rem;
+        }
+
+        .carousel-item {
+          width: 130px;
+        }
+
+        .hero h1 {
+          font-size: 1.5rem;
+        }
+
+        .hero h1 span {
+          font-size: 1.7rem;
+        }
+
+        .service-icon-large {
+          width: 50px;
+          height: 50px;
+        }
+
+        .service-icon-large i {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" role="banner">
+      <div class="container">
+        <nav class="nav-container" aria-label="Navegação principal">
+          <div class="logo">
+            <img
+              src="image/LogoBranca.png"
+              alt="FÊNIX CONSULTORIA - Especialistas em segurança do trabalho"
+              class="logo-img"
+              width="50"
+              height="50"
+              loading="lazy"
+            />
+          </div>
+          <ul class="nav-menu" role="menubar" id="nav-menu">
+            <li class="nav-item" role="none">
+              <a href="#home" class="nav-link" role="menuitem">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>Início</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#differentials" class="nav-link" role="menuitem">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <span>Diferenciais</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#video" class="nav-link" role="menuitem">
+                <i class="fas fa-play-circle" aria-hidden="true"></i>
+                <span>Vídeo</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#about" class="nav-link" role="menuitem">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                <span>Sobre</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#services" class="nav-link" role="menuitem">
+                <i class="fas fa-tools" aria-hidden="true"></i>
+                <span>Serviços</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#map" class="nav-link" role="menuitem">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>Localização</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#faq" class="nav-link" role="menuitem">
+                <i class="fas fa-question-circle" aria-hidden="true"></i>
+                <span>FAQ</span>
+              </a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#contact" class="nav-link" role="menuitem">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>Contato</span>
+              </a>
+            </li>
+          </ul>
+          <button
+            class="hamburger"
+            aria-label="Menu mobile"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Faixa de Botões FLUTUANTE -->
+    <div class="button-strip" id="button-strip">
+      <div class="container">
+        <a href="#services" class="strip-button">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          <span>Treinamentos Normativos</span>
+        </a>
+        <a href="#services" class="strip-button">
+          <i class="fas fa-hard-hat" aria-hidden="true"></i>
+          <span>Segurança do Trabalho</span>
+        </a>
+        <a href="#contact" class="strip-button">
+          <i class="fas fa-calendar-check" aria-hidden="true"></i>
+          <span>Agendar Consultoria</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section MODIFICADA -->
+    <section class="hero" id="home" aria-label="Seção principal">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1>Excelência em <span>Segurança</span> e Treinamentos</h1>
+          </div>
+          <div class="hero-image">
+            <img
+              src="image/Fenix.png"
+              alt="FÊNIX CONSULTORIA - Especialistas em segurança do trabalho e treinamentos normativos"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="scroll-down"
+        onclick="
+          document
+            .getElementById('differentials')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+        aria-label="Rolar para baixo"
+      >
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <!-- Carrossel de Serviços - CORRIGIDO -->
+    <section class="services-carousel" aria-labelledby="carousel-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="carousel-title">Nossas Especialidades</h2>
+          <div class="section-subtitle">
+            Conheça nossos principais serviços em segurança do trabalho e
+            treinamentos normativos
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <!-- CORREÇÃO APLICADA: Carrossel sem sobreposição -->
+        <div class="carousel-track primary" aria-live="polite">
+          <!-- Itens do carrossel - Serviços de SST -->
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-hard-hat" aria-hidden="true"></i>
+            </div>
+            <h4>NR 35 - Trabalho em Altura</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-fire-extinguisher" aria-hidden="true"></i>
+            </div>
+            <h4>NR 23 - Combate a Incêndio</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-bolt" aria-hidden="true"></i>
+            </div>
+            <h4>NR 10 - Segurança em Eletricidade</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <h4>NR 33 - Espaço Confinado</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-tint" aria-hidden="true"></i>
+            </div>
+            <h4>NR 20 - Inflamáveis</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-syringe" aria-hidden="true"></i>
+            </div>
+            <h4>NR 32 - Saúde Hospitalar</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-truck-loading" aria-hidden="true"></i>
+            </div>
+            <h4>NR 11 - Operação de Máquinas</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-file-alt" aria-hidden="true"></i>
+            </div>
+            <h4>NR 12 - Segurança de Máquinas</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-ambulance" aria-hidden="true"></i>
+            </div>
+            <h4>Primeiros Socorros</h4>
+          </div>
+          <div class="carousel-item">
+            <div class="service-icon-large">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+            </div>
+            <h4>PPRA / PCMSO</h4>
+          </div>
+        </div>
+
+    <!-- Diferenciais -->
+    <section
+      class="floating-differentials"
+      id="differentials"
+      aria-labelledby="differentials-title"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2 id="differentials-title">
+            Por que Escolher a FÊNIX CONSULTORIA?
+          </h2>
+          <div class="section-subtitle">
+            Conheça os diferenciais que nos tornam referência em segurança do
+            trabalho e treinamentos normativos no Pará
+          </div>
+        </div>
+        <div class="differentials-grid">
+          <div class="differential-card fade-in">
+            <div class="differential-icon">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <h3>Instrutores Qualificados</h3>
+            <p>
+              Nossa equipe é composta por instrutores certificados e com ampla
+              experiência prática em segurança do trabalho. Todos possuem
+              formação específica e estão constantemente atualizados com as
+              novas legislações e normas técnicas.
+            </p>
+          </div>
+          <div class="differential-card fade-in">
+            <div class="differential-icon">
+              <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+            </div>
+            <h3>Metodologia Personalizada</h3>
+            <p>
+              Desenvolvemos treinamentos e consultorias sob medida para cada
+              empresa, considerando as particularidades do segmento, porte e
+              necessidades específicas. Nossa metodologia combina teoria e
+              prática.
+            </p>
+          </div>
+          <div class="differential-card fade-in">
+            <div class="differential-icon">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            </div>
+            <h3>Conformidade Total</h3>
+            <p>
+              Garantimos que sua empresa esteja em total conformidade com todas
+              as Normas Regulamentadoras e legislações vigentes. Realizamos
+              auditorias periódicas e fornecemos certificados válidos em todo
+              território nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Vídeo MODIFICADA -->
+    <section class="video-section" id="video" aria-labelledby="video-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="video-title">Conheça a Fênix Consultoria</h2>
+          <div class="section-subtitle">
+            Assista ao nosso vídeo institucional e saiba mais sobre nossa missão
+            e valores
+          </div>
+        </div>
+
+        <div class="video-container fade-in">
+          <div class="video-wrapper">
+            <!-- Substituído o iframe do YouTube pelo seu vídeo local -->
+            <video controls poster="image/Fenix.png" style="width: 100%; height: 100%;">
+              <source src="image/VideoFenix.mp4" type="video/mp4">
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>Sua Segurança é Nossa Prioridade</h3>
+            <p>
+              Na Fênix Consultoria, acreditamos que a segurança do trabalho é
+              fundamental para o sucesso de qualquer empresa. Através de
+              treinamentos especializados e consultoria personalizada, ajudamos
+              você a criar um ambiente de trabalho mais seguro e produtivo.
+            </p>
+            <div style="margin-top: 25px">
+              <a href="#contact" class="btn">
+                <i class="fas fa-handshake" aria-hidden="true"></i> Fale Conosco
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="about-title">Sobre a Fênix Consultoria</h2>
+          <div class="section-subtitle">
+            Transformando a cultura de segurança nas empresas paraenses através
+            da excelência em treinamentos e consultorias especializadas
+          </div>
+        </div>
+        <div class="about-content fade-in">
+          <div class="about-image">
+            <img
+              src="image/Fenix.png"
+              alt="Equipe Fênix Consultoria - Especialistas em segurança do trabalho"
+              width="500"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <h3>Nossa Missão</h3>
+            <p>
+              A Fênix Consultoria nasceu com o propósito de elevar os padrões de
+              segurança do trabalho no estado do Pará. Com mais de 10 anos de
+              experiência no mercado, nos especializamos em oferecer soluções
+              completas em SST para empresas de todos os portes e segmentos.
+            </p>
+            <p>
+              Nossa equipe multidisciplinar é formada por engenheiros de
+              segurança, técnicos em segurança do trabalho, médicos do trabalho
+              e instrutores certificados, todos comprometidos com a excelência e
+              a constante atualização técnica.
+            </p>
+            <p>
+              Atuamos desde a análise de riscos e elaboração de documentação
+              obrigatória até a realização de treinamentos práticos e simulados
+              de emergência, sempre com foco na prevenção de acidentes.
+            </p>
+            <div
+              class="about-buttons"
+              style="
+                display: flex;
+                gap: 15px;
+                margin-top: 25px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de agendar uma reunião para conhecer melhor os serviços da Fênix"
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar reunião no WhatsApp"
+              >
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i> Agendar
+                Reunião
+              </a>
+              <a
+                href="#contact"
+                class="btn btn-dark"
+                aria-label="Falar conosco por telefone"
+              >
+                <i class="fas fa-phone-alt" aria-hidden="true"></i> Falar
+                Conosco
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossos Serviços -->
+    <section
+      class="services section-dark"
+      id="services"
+      aria-labelledby="services-title"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2 id="services-title">Nossos Serviços</h2>
+          <div class="section-subtitle">
+            Oferecemos soluções completas em segurança do trabalho e
+            treinamentos normativos para sua empresa
+          </div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <h3>Treinamentos Normativos</h3>
+            <p>
+              Cursos teóricos e práticos de todas as NRs: NR 10, 11, 12, 20, 23,
+              33, 35 e demais normas regulamentadoras. Certificados válidos em
+              todo território nacional.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre treinamentos normativos"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre treinamentos normativos"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-file-contract" aria-hidden="true"></i>
+            </div>
+            <h3>Consultoria em SST</h3>
+            <p>
+              Elaboração de PPRA, PCMSO, LTCAT, PGR e demais documentos
+              obrigatórios. Auditorias de conformidade e implementação de
+              programas de segurança.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre consultoria em SST"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre consultoria em SST"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-ambulance" aria-hidden="true"></i>
+            </div>
+            <h3>Primeiros Socorros</h3>
+            <p>
+              Treinamento prático de primeiros socorros conforme exigências
+              legais. Instrutores com formação em enfermagem e experiência em
+              emergências.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre treinamento de primeiros socorros"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre treinamento de primeiros socorros"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-fire-extinguisher" aria-hidden="true"></i>
+            </div>
+            <h3>Brigada de Incêndio</h3>
+            <p>
+              Formação e reciclagem de brigadistas. Treinamento prático com uso
+              de extintores e equipamentos de combate a incêndio.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre formação de brigada de incêndio"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre formação de brigada de incêndio"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3>Gestão de Riscos</h3>
+            <p>
+              Identificação, análise e controle de riscos ocupacionais.
+              Desenvolvimento de matriz de risco e plano de ação preventivo.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre gestão de riscos"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre gestão de riscos"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-card-icon">
+              <i class="fas fa-users" aria-hidden="true"></i>
+            </div>
+            <h3>CIPA - Treinamento</h3>
+            <p>
+              Capacitação de membros da CIPA conforme NR 5. Desenvolvimento de
+              habilidades para atuação eficaz na prevenção de acidentes.
+            </p>
+            <div style="margin-top: 20px">
+              <a
+                href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre treinamento da CIPA"
+                class="btn btn-small"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar informações sobre treinamento da CIPA"
+              >
+                <i class="fas fa-info-circle" aria-hidden="true"></i> Mais
+                Informações
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="map-section" id="map" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="map-title">Nossa Localização</h2>
+          <div class="section-subtitle">
+            Encontre-nos facilmente em Paragominas ou solicite nossos serviços
+            em todo o estado do Pará
+          </div>
+        </div>
+        <div class="map-container fade-in">
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d-47.352008738403036!3d-2.977304552245123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d3a2e3b3b3b3b3%3A0x3b3b3b3b3b3b3b3b!2sAv.%20Porto%20Alegre%2C%20204%20-%20Jardim%20Bela%20Vista%2C%20Paragominas%20-%20PA%2C%2068628-300!5e0!3m2!1spt-BR!2sbr!4v1689876543210"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização da FÊNIX CONSULTORIA em Paragominas - Pará"
+            ></iframe>
+          </div>
+          <div class="map-info">
+            <h3>FÊNIX CONSULTORIA</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-text">
+                <h4>Endereço</h4>
+                <p>
+                  Av. Porto Alegre, 204 - Jardim Bela Vista<br />Paragominas -
+                  PA, 68628-300
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-text">
+                <h4>Horário de Atendimento</h4>
+                <p>
+                  Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h<br />Atendemos
+                  com hora marcada
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-text">
+                <h4>Telefones</h4>
+                <p>
+                  (94) 98439-4383 (WhatsApp)<br />(91) 99291-1531 (Consultor
+                  Técnico)
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-info-text">
+                <h4>E-mail</h4>
+                <p>
+                  contato@fenixconsultoria.com.br<br />comercial@fenixconsultoria.com.br
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-top: 25px">
+              <a
+                href="https://maps.app.goo.gl/gDepZbrivDiZnC1m9"
+                class="btn btn-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="width: 100%"
+                aria-label="Ver rotas no Google Maps"
+              >
+                <i class="fas fa-directions" aria-hidden="true"></i> Ver Rotas
+                no Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="faq-title">Perguntas Frequentes</h2>
+          <div class="section-subtitle">
+            Tire suas dúvidas sobre nossos serviços em segurança do trabalho e
+            treinamentos normativos
+          </div>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item fade-in">
+            <div
+              class="faq-question"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <div style="display: flex; align-items: center">
+                <i class="fas fa-calendar-alt faq-icon" aria-hidden="true"></i>
+                <span
+                  >Com que frequência devo realizar os treinamentos de segurança
+                  do trabalho?</span
+                >
+              </div>
+              <i class="fas fa-chevron-down faq-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="faq-answer" id="faq-answer-1">
+              <p>
+                A periodicidade dos treinamentos varia conforme a Norma
+                Regulamentadora específica. Por exemplo:
+              </p>
+              <ul style="margin-top: 10px; padding-left: 20px">
+                <li>NR 35 (Trabalho em Altura): Reciclagem a cada 2 anos</li>
+                <li>NR 10 (Eletricidade): Reciclagem a cada 2 anos</li>
+                <li>NR 33 (Espaço Confinado): Reciclagem anual</li>
+                <li>Primeiros Socorros: Reciclagem anual</li>
+                <li>CIPA: Treinamento a cada gestão (normalmente anual)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div
+              class="faq-question"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+            >
+              <div style="display: flex; align-items: center">
+                <i
+                  class="fas fa-file-certificate faq-icon"
+                  aria-hidden="true"
+                ></i>
+                <span
+                  >Os certificados emitidos pela Fênix Consultoria são válidos
+                  em todo território nacional?</span
+                >
+              </div>
+              <i class="fas fa-chevron-down faq-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="faq-answer" id="faq-answer-2">
+              <p>
+                Sim, todos os nossos certificados são válidos em todo território
+                nacional e atendem às exigências do Ministério do Trabalho e
+                Emprego. Nossos treinamentos seguem rigorosamente as diretrizes
+                estabelecidas em cada Norma Regulamentadora.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <div
+              class="faq-question"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+            >
+              <div style="display: flex; align-items: center">
+                <i class="fas fa-users faq-icon" aria-hidden="true"></i>
+                <span
+                  >Vocês realizam treinamentos in company (na empresa do
+                  cliente)?</span
+                >
+              </div>
+              <i class="fas fa-chevron-down faq-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="faq-answer" id="faq-answer-3">
+              <p>
+                Sim, realizamos treinamentos in company em todo o estado do
+                Pará. Esta modalidade oferece diversas vantagens como adaptação
+                do conteúdo à realidade da empresa, menor deslocamento dos
+                colaboradores e maior aproveitamento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section
+      class="contact section-dark"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+      <div class="container">
+        <div class="section-title">
+          <h2 id="contact-title">Entre em Contato</h2>
+          <div class="section-subtitle">
+            Estamos prontos para ajudar sua empresa a alcançar a excelência em
+            segurança do trabalho
+          </div>
+        </div>
+        <div class="contact-cards fade-in">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Atendimento rápido e direto</p>
+            <p style="font-weight: 600; margin: 15px 0; font-size: 1.1rem">
+              (94) 98439-4383
+            </p>
+            <a
+              href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre os serviços da Fênix Consultoria"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Falar no WhatsApp (94) 98439-4383"
+            >
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Enviar Mensagem
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            </div>
+            <h3>Telefone</h3>
+            <p>Atendimento comercial</p>
+            <p style="font-weight: 600; margin: 15px 0; font-size: 1.1rem">
+              (91) 99291-1531
+            </p>
+            <a
+              href="tel:91992911531"
+              class="btn"
+              aria-label="Ligar para (91) 99291-1531"
+            >
+              <i class="fas fa-phone-alt" aria-hidden="true"></i> Ligar Agora
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <h3>E-mail</h3>
+            <p>Para orçamentos e propostas</p>
+            <p style="font-weight: 600; margin: 15px 0; font-size: 1rem">
+              contato@fenixconsultoria.com.br
+            </p>
+            <a
+              href="mailto:contato@fenixconsultoria.com.br"
+              class="btn"
+              aria-label="Enviar e-mail para contato@fenixconsultoria.com.br"
+            >
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar
+              E-mail
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>FÊNIX CONSULTORIA</h3>
+            <p>
+              Especialistas em segurança do trabalho e treinamentos normativos.
+              Transformando a cultura de segurança nas empresas paraenses
+              através da excelência e comprometimento.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Instagram da Fênix Consultoria"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link"
+                aria-label="LinkedIn da Fênix Consultoria"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Facebook da Fênix Consultoria"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a
+                href="#"
+                class="social-link"
+                aria-label="YouTube da Fênix Consultoria"
+              >
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Início</a></li>
+              <li><a href="#differentials">Diferenciais</a></li>
+              <li><a href="#video">Vídeo</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#services">Serviços</a></li>
+              <li><a href="#map">Localização</a></li>
+              <li><a href="#faq">Perguntas Frequentes</a></li>
+              <li><a href="#contact">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contato</h3>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone" aria-hidden="true"></i> (94) 98439-4383
+                (WhatsApp)
+              </li>
+              <li>
+                <i class="fas fa-phone" aria-hidden="true"></i> (91) 99291-1531
+              </li>
+              <li>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                contato@fenixconsultoria.com.br
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Paragominas - PA
+              </li>
+              <li>
+                <i class="fas fa-clock" aria-hidden="true"></i> Seg-Sex: 8h-18h
+                | Sáb: 8h-12h
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 FÊNIX CONSULTORIA - Todos os direitos reservados.</p>
+          <p
+            style="
+              margin-top: 10px;
+              font-size: 0.9rem;
+              color: rgba(255, 255, 255, 0.8);
+            "
+          >
+            Desenvolvido por
+            <a
+              href="https://wa.me/5591998361022?text=Olá! Gostaria de informações sobre desenvolvimento de sites"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                color: var(--accent);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+              "
+              aria-label="Contatar desenvolvedor JR Dev"
+            >
+              <i
+                class="fab fa-whatsapp"
+                style="color: #25d366"
+                aria-hidden="true"
+              ></i>
+              <span>JR Dev</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float com animação aprimorada -->
+    <a
+      href="https://wa.me/55949984394383?text=Olá! Gostaria de informações sobre os serviços da Fênix Consultoria"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar conosco no WhatsApp (94) 98439-4383"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <script>
+      // Menu Mobile
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      function toggleMobileMenu() {
+        const isActive = navMenu.classList.contains("active");
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        hamburger.setAttribute("aria-expanded", !isActive);
+        document.body.style.overflow = !isActive ? "hidden" : "";
+      }
+
+      hamburger.addEventListener("click", toggleMobileMenu);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Header scroll effect
+      const header = document.getElementById("header");
+      const buttonStrip = document.getElementById("button-strip");
+
+      let lastScrollTop = 0;
+      let ticking = false;
+
+      function updateScroll() {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        // Header scroll effect
+        if (scrollTop > 50) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+
+        // Controle da faixa de botões flutuante
+        if (buttonStrip) {
+          if (scrollTop > 100) {
+            buttonStrip.classList.add("scrolled");
+            buttonStrip.classList.remove("hidden");
+          } else {
+            buttonStrip.classList.remove("scrolled");
+            buttonStrip.classList.remove("hidden");
+          }
+
+          // Esconder ao rolar para baixo, mostrar ao rolar para cima
+          if (scrollTop > lastScrollTop && scrollTop > 200) {
+            buttonStrip.classList.add("hidden");
+          } else if (scrollTop < lastScrollTop) {
+            buttonStrip.classList.remove("hidden");
+          }
+        }
+
+        lastScrollTop = scrollTop;
+
+        // Ativar link da seção atual
+        const sections = document.querySelectorAll("section");
+        const scrollPosition = window.scrollY + 100;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          const sectionId = section.getAttribute("id");
+
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${sectionId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateScroll);
+          ticking = true;
+        }
+      });
+
+      // Animação de entrada
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      const appearOnScroll = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              appearOnScroll.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        },
+      );
+
+      fadeElements.forEach((element) => {
+        appearOnScroll.observe(element);
+      });
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        question.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+
+          // Fechar todos os itens
+          faqItems.forEach((otherItem) => {
+            otherItem.classList.remove("active");
+            otherItem
+              .querySelector(".faq-question")
+              .setAttribute("aria-expanded", "false");
+          });
+
+          // Abrir o item clicado se não estava ativo
+          if (!isActive) {
+            item.classList.add("active");
+            question.setAttribute("aria-expanded", "true");
+          }
+        });
+
+        // Suporte a teclado
+        question.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            question.click();
+          }
+        });
+      });
+
+      // Scroll suave para âncoras
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          if (href !== "#" && href !== "" && href !== "#!") {
+            e.preventDefault();
+            const target = document.querySelector(href);
+
+            if (target) {
+              // CALCULAR OFFSET DE FORMA SEGURA
+              const header = document.getElementById("header");
+              const buttonStrip = document.getElementById("button-strip");
+
+              const headerHeight = header ? header.offsetHeight : 0;
+              const buttonStripHeight = buttonStrip
+                ? buttonStrip.offsetHeight
+                : 0;
+              const totalOffset = headerHeight + buttonStripHeight;
+
+              // VALIDAÇÃO PARA NÚMEROS NEGATIVOS
+              const targetPosition = Math.max(
+                target.offsetTop - totalOffset,
+                0,
+              );
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
+
+      // Otimização do Carrossel
+      function optimizeCarousel() {
+        const primaryTrack = document.querySelector(".carousel-track.primary");
+        const secondaryTrack = document.querySelector(
+          ".carousel-track.secondary",
+        );
+        const tracks = document.querySelectorAll(".carousel-track");
+
+        // Ajustar velocidade baseada na largura da tela
+        const screenWidth = window.innerWidth;
+        let animationDuration = 40; // segundos
+
+        if (screenWidth < 768) {
+          animationDuration = 30;
+          // Em mobile, esconder segunda linha
+          if (secondaryTrack) {
+            secondaryTrack.style.display = "none";
+          }
+        } else if (screenWidth < 992) {
+          animationDuration = 35;
+        }
+
+        // Aplicar duração das animações
+        tracks.forEach((track) => {
+          if (track) {
+            track.style.animationDuration = `${animationDuration}s`;
+          }
+        });
+
+        // Pausar animação no hover para melhor interação
+        tracks.forEach((track) => {
+          if (track) {
+            track.addEventListener("mouseenter", () => {
+              track.style.animationPlayState = "paused";
+            });
+
+            track.addEventListener("mouseleave", () => {
+              track.style.animationPlayState = "running";
+            });
+
+            track.addEventListener("touchstart", () => {
+              track.style.animationPlayState = "paused";
+            });
+
+            track.addEventListener("touchend", () => {
+              setTimeout(() => {
+                track.style.animationPlayState = "running";
+              }, 2000);
+            });
+          }
+        });
+
+        // Clonar itens para loop infinito suave
+        if (primaryTrack) {
+          const items = primaryTrack.innerHTML;
+          primaryTrack.innerHTML = items + items + items;
+        }
+
+        if (secondaryTrack && screenWidth >= 768) {
+          const items = secondaryTrack.innerHTML;
+          secondaryTrack.innerHTML = items + items + items;
+        }
+      }
+
+      // Inicializar carrossel otimizado
+      window.addEventListener("load", optimizeCarousel);
+      window.addEventListener("resize", optimizeCarousel);
+
+      // Prevenir overflow horizontal
+      document.body.style.overflowX = "hidden";
+
+      // Otimização de performance - evitar reflow
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(optimizeCarousel, 250);
+      });
+
+      // Inicializar otimizações
+      document.addEventListener("DOMContentLoaded", function () {
+        optimizeCarousel();
+      });
+    </script>
+  </body>
+</html>
